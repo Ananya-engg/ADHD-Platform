@@ -1,0 +1,90 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADHD Learning Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="#progress">Personal Details</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#mentor">Mentor Meeting</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login / Signup -->
+  <section id="auth">
+    <h2>Login / Signup</h2>
+    <form id="login-form">
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses">
+    <h2>Courses</h2>
+    <div>
+      <button onclick="playLiveLecture()">Join Live Lecture</button>
+      <button onclick="watchRecording()">Watch Recording</button>
+      <button onclick="showNotes()">View Notes</button>
+      <div id="random-checkin"></div>
+    </div>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz">
+    <h2>Gamified Quiz</h2>
+    <div id="quiz-container"></div>
+    <div id="difficulty-checkin"></div>
+  </section>
+
+  <!-- Personal Details -->
+  <section id="progress">
+    <h2>Progress</h2>
+    <div id="course-details"></div>
+    <div id="progress-tracking"></div>
+  </section>
+
+  <!-- Background Music -->
+  <section id="music">
+    <h2>Background Music</h2>
+    <select id="music-select">
+      <option value="calm1.mp3">Calm Melody 1</option>
+      <option value="focus.mp3">Focus Beats</option>
+      <option value="ocean.mp3">Ocean Waves</option>
+    </select>
+    <button onclick="playMusic()">Play</button>
+    <audio id="audio-player" controls></audio>
+  </section>
+
+  <!-- Mentor Meeting -->
+  <section id="mentor">
+    <h2>Mentor Meeting</h2>
+    <div id="meeting-schedule"></div>
+    <button onclick="scheduleMeeting()">Request Meeting</button>
+    <div id="past-meetings"></div>
+  </section>
+
+  <!-- Feedback -->
+  <section id="feedback">
+    <h2>Feedback</h2>
+    <form id="feedback-form">
+      <textarea placeholder="Your feedback here..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
